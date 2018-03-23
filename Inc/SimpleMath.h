@@ -538,6 +538,15 @@ namespace DirectX
             static Matrix CreateOrthographicOffCenter(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane);
 
             static Matrix CreateLookAt(const Vector3& position, const Vector3& target, const Vector3& up);
+
+            static Matrix CreatePerspectiveFieldOfViewLH(float fov, float aspectRatio, float nearPlane, float farPlane);
+            static Matrix CreatePerspectiveLH(float width, float height, float nearPlane, float farPlane);
+            static Matrix CreatePerspectiveOffCenterLH(float left, float right, float bottom, float top, float nearPlane, float farPlane);
+            static Matrix CreateOrthographicLH(float width, float height, float zNearPlane, float zFarPlane);
+            static Matrix CreateOrthographicOffCenterLH(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane);
+
+            static Matrix CreateLookAtLH(const Vector3& position, const Vector3& target, const Vector3& up);
+
             static Matrix CreateWorld(const Vector3& position, const Vector3& forward, const Vector3& up);
 
             static Matrix CreateFromQuaternion(const Quaternion& quat);

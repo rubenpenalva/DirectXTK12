@@ -1,0 +1,1 @@
+This fork goal is to have a functional tailored to my project needs version of the directxtk.

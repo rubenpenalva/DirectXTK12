@@ -2575,6 +2575,58 @@ inline Matrix Matrix::CreateLookAt(const Vector3& eye, const Vector3& target, co
     return R;
 }
 
+inline Matrix Matrix::CreatePerspectiveFieldOfViewLH(float fov, float aspectRatio, float nearPlane, float farPlane)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMStoreFloat4x4(&R, XMMatrixPerspectiveFovLH(fov, aspectRatio, nearPlane, farPlane));
+    return R;
+}
+
+inline Matrix Matrix::CreatePerspectiveLH(float width, float height, float nearPlane, float farPlane)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMStoreFloat4x4(&R, XMMatrixPerspectiveLH(width, height, nearPlane, farPlane));
+    return R;
+}
+
+inline Matrix Matrix::CreatePerspectiveOffCenterLH(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMStoreFloat4x4(&R, XMMatrixPerspectiveOffCenterLH(left, right, bottom, top, nearPlane, farPlane));
+    return R;
+}
+
+inline Matrix Matrix::CreateOrthographicLH(float width, float height, float zNearPlane, float zFarPlane)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMStoreFloat4x4(&R, XMMatrixOrthographicLH(width, height, zNearPlane, zFarPlane));
+    return R;
+}
+
+inline Matrix Matrix::CreateOrthographicOffCenterLH(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMStoreFloat4x4(&R, XMMatrixOrthographicOffCenterLH(left, right, bottom, top, zNearPlane, zFarPlane));
+    return R;
+}
+
+inline Matrix Matrix::CreateLookAtLH(const Vector3& eye, const Vector3& target, const Vector3& up)
+{
+    using namespace DirectX;
+    Matrix R;
+    XMVECTOR eyev = XMLoadFloat3(&eye);
+    XMVECTOR targetv = XMLoadFloat3(&target);
+    XMVECTOR upv = XMLoadFloat3(&up);
+    XMStoreFloat4x4(&R, XMMatrixLookAtLH(eyev, targetv, upv));
+    return R;
+}
+
+
 inline Matrix Matrix::CreateWorld(const Vector3& position, const Vector3& forward, const Vector3& up)
 {
     using namespace DirectX;

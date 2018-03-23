@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{771f5f80-d173-49c3-8afb-790e8f7cb0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{c52e19b6-8703-49a1-9b36-101a05b4745d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Shared">
+      <UniqueIdentifier>{5c972584-03dd-4b7d-9026-0e53ac731582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Shared">
+      <UniqueIdentifier>{95983e6d-a96c-4fb5-b014-8e0527c1d68b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\pch.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DDS.h">
+      <Filter>Src\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PlatformHelpers.h">
+      <Filter>Src\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GamePad.h">
+      <Filter>Inc\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Keyboard.h">
+      <Filter>Inc\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Mouse.h">
+      <Filter>Inc\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SimpleMath.h">
+      <Filter>Inc\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SimpleMath.inl">
+      <Filter>Inc\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\DDSTextureLoader_Custom.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LoaderHelpers_Custom.h">
+      <Filter>Src\Shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SimpleMath.cpp">
+      <Filter>Src\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Mouse.cpp">
+      <Filter>Src\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Keyboard.cpp">
+      <Filter>Src\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GamePad.cpp">
+      <Filter>Src\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Geometry.cpp">
+      <Filter>Src\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DDSTextureLoader_Custom.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.txt" />
+    <None Include="Src\TeapotData.inc">
+      <Filter>Src\Shared</Filter>
+    </None>
+  </ItemGroup>
+</Project>
